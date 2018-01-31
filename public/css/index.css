@@ -1,0 +1,427 @@
+@charset "utf-8";
+body {
+    font-size: 14px;
+}
+
+body,
+em {
+    margin: 0;
+    padding: 0;
+    font-family: "PingFangSC-Regular";
+}
+
+em {
+    font-style: normal;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.colorBlue {
+    color: #288bf2;
+}
+
+.colorBlack {
+    color: #434343
+}
+
+.border {
+    border-radius: 2px;
+    border: 1px solid #b5bdc6;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 1px 1px 8px 0 #1da6f8;
+    border-color: #1da6f8;
+}
+
+
+
+/*导航栏*/
+
+.NavigationBar {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    padding: 10px 30px;
+    background: linear-gradient(to right, #00c6ff 0%, #288bf2 100%);
+    color: #fff;
+}
+
+.NavigationBar img {
+    width: 50px;
+    height: 50px;
+}
+
+.NavigationBar ul li {
+    float: left;
+    width: 60px;
+    cursor: pointer;
+    margin-right: 100px;
+    font-size: 18px;
+    -webkit-transition: font-size .2s ease-in;
+    -moz-transition: font-size .2s ease-in;
+    transition: font-size .2s ease-in;
+}
+
+.NavigationBar ul li:hover {
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px #fff;
+    font-size: 21px;
+}
+
+.headTitle {
+    line-height: 40px;
+    color: #f69;
+    font-family: "PingFangSC-Medium"
+}
+
+.slectWrap {
+    padding: 30px 20px 20px 60px;
+}
+
+.slectWrap .selctBox {
+    margin-right: 20px;
+    position: relative;
+    width: 240px;
+    outline: none;
+}
+
+.slectWrap .selctBox .titleInput {
+    width: 230px;
+    height: 32px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.slectWrap .selctBox img {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.slectWrap .selectWrapper {
+    margin: 0 20px;
+    width: 300px;
+    outline: none;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+}
+
+.slectWrap .selectWrapper .selectLabel,
+.slectWrap .selectWrapper .selectBox {
+    font-size: 13px;
+    display: inline-block;
+}
+
+.slectWrap .selectWrapper .selectBox {
+    margin-left: 10px;
+    padding-left: 10px;
+    width: 210px;
+}
+
+.slectWrap .selectWrapper .optionUl {
+    position: absolute;
+    top: 35px;
+    left: 65px;
+    width: 220px;
+    height: 114px;
+    overflow: auto;
+    border-top: none;    
+    height: 114px;
+    background: #fff;
+}
+
+.slectWrap .selectWrapper .optionUl ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slectWrap .selectWrapper .optionUl ul li {
+    list-style: none;
+    text-indent: 10px;
+}
+
+.slectWrap .selectWrapper .optionUl ul li:hover,
+.slectWrap .selectWrapper .optionUl .selected,
+.showInput .innerValue:hover {
+    background: #F8F8F9;
+    color: #1da6f8;
+    cursor: pointer;
+}
+
+.boxShadow {
+    box-shadow: 0px 1px 9px 0 #1da6f8;
+    border-color: #1da6f8;
+}
+
+.selIcon {
+    position: absolute;
+    top: 2px;
+    right: 21px;
+    width: 10px;
+    height: 10px;
+    margin: 6px 4px;
+    border-radius: 2px;
+    border-top: 2px solid #b5bdc6;
+    border-left: 2px solid #b5bdc6;
+    transform: translate(1px, 0) rotate(225deg);
+}
+
+.selectArrow {
+    transform: translate(1px, 0) rotate(45deg);
+    top: 8px;
+}
+
+.showInput {
+    width: 240px;
+    max-height: 137px;
+    overflow: auto;
+        position: absolute;
+    background: #fff;
+}
+
+.showInput .innerValue {
+    line-height: 30px;
+    height: 30px;
+    text-indent: 10px;
+    font-size: 13px;
+}
+
+.selectWrapper .titleInput {
+    height: 32px;
+    color: #B5BDC6;
+    font-size: 13px;
+    line-height: 32px;
+    text-indent: 12px;
+    position: relative;
+    width: 220px;
+    border-radius: 2px;
+    margin-right: 13px;
+}
+
+.selectWrapper .titleInput:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('../image/calendar.png')no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+}
+
+.selectWrapper .selectTip {
+    color: #485767;
+}
+
+.selectWrapper .dateRangeBox {
+    position: absolute;
+    display: none;
+    width: 560px;
+    top: 0px;
+    left: 9px;
+    padding-bottom: 10px;
+    z-index: 10;
+    transform: scale(.8);
+    background: #fff;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+.selectWrapper .dateRangeBox .checkBtn {
+    border: 1px solid #58A7F8;
+    line-height: 30px;
+    color: #58A7F8;
+    width: 80px;
+    margin-right: 98px;
+    text-align: center;
+    border-radius: 2px;
+    float: right;
+    font-size: 12px;
+    height: 30px;
+    outline: none;
+}
+
+.selectWrapper .dateRangeBox .checkBtn:hover,
+.selectWrapper .dateRangeBox .checkBtn:active {
+    background: #288bf2;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: 1px solid #288bf2;
+}
+
+.is-selected,
+.rdr-Days span:hover {
+    background: #1da6f8!important;
+    color: #fff!important;
+}
+
+.mainTable {
+    width: 100%;
+    background: #9dadb612;
+    padding: 20px 0;
+}
+
+.mainTable .headBtn {
+    color: #1da6f8;
+    line-height: 40px;
+    border-bottom: 1px solid #b5bdc6;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mainTable .headBtn .addBtn {
+    margin-left: 32px;
+}
+
+.mainTable .headBtn .addBtn span {
+    background: url(../image/edit.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn .addBtn:hover {
+    color: #288bf2;
+}
+
+.mainTable .headBtn .addBtn:hover span {
+    background: url(../image/hoverE.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn div span {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.mainTable .headBtn .delBtn span {
+    background: url(../image/del.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn .delBtn {
+    color: #F75A5A;
+    margin-right: 32px;
+}
+
+.mainTable .headBtn .delBtn:hover span {
+    background: url(../image/hoverD.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn .delBtn:hover {
+    color: red;
+}
+
+
+/*表格*/
+
+.mainTable .innerBox {
+    background: #fff;
+    box-sizing: border-box;
+    margin: 20px 130px 30px 60px;
+    padding: 20px 50px;
+    border-radius: 6px;
+}
+
+.mainTable .innerBox .tabeleWrap {
+    width: 100%;
+    padding: 0 0 20px 0;
+    border-collapse: collapse;
+}
+
+.mainTable .innerBox .tabeleWrap thead {
+    line-height: 42px;
+    font-family: "PingFangSC-Medium";
+    color: #808080;
+    text-align: center;
+}
+
+.mainTable .innerBox .tabeleWrap thead tr td:nth-child(2) {
+    width: 20%;
+    text-align: left;
+    padding-left: 50px;
+}
+.mainTable .innerBox .tabeleWrap thead tr td:nth-child(1) {
+    width: 116px;
+}
+
+.mainTable .innerBox .tabeleWrap thead tr td:nth-child(5) {
+    width: 26%;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr {
+    line-height: 42px;
+    border-top: 1px solid #E9EBEE;
+    height: 42px;
+    text-align: center; line-height: 42px;
+    color: #383E46;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr:hover {
+    background: #F8F8F9;
+    cursor: pointer;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr:hover .title ,
+.mainTable .innerBox .tabeleWrap tbody tr:hover .other {
+    color: #288bf2;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr td:nth-child(2) div {
+    text-align: left;
+}
+
+.mainTable .innerBox .tabeleWrap .number .checkBox {
+    margin-right: 8px;
+    background: url(../image/empty.png);
+    background-size: cover;
+    vertical-align: text-bottom;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.mainTable .innerBox .tabeleWrap .number  .checked{
+    background: url(../image/checkbox.png);
+    background-size: cover;
+        transform: scale(1.1,1.1);
+}
+.mainTable .innerBox .tabeleWrap .number span:nth-child(2) {
+    width: 30px;
+    display: inline-block;
+    text-align: left;
+}
