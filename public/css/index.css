@@ -1,6 +1,8 @@
 @charset "utf-8";
 body {
     font-size: 14px;
+    font-family: "PingFangSC-Regular";
+    
 }
 
 body,
@@ -83,15 +85,13 @@ input:focus {
     cursor: pointer;
     margin-right: 100px;
     font-size: 18px;
-    -webkit-transition: font-size .2s ease-in;
-    -moz-transition: font-size .2s ease-in;
     transition: font-size .2s ease-in;
 }
 
 .NavigationBar ul li:hover {
     cursor: pointer;
     font-weight: 600;
-    text-shadow: 1px 1px 5px #fff;
+    text-shadow: 1px 1px 5px #777;
     font-size: 21px;
 }
 

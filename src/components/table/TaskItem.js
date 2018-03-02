@@ -20,12 +20,12 @@ class TaskItem extends Component{
     }
 
     render(){
-        const {id,task,pageInfo,newTasklist,searchParamas,sendingTime,actions,checkHandle} = this.props
+        const {id,task,pageInfo,searchParamas,sendingTime,actions,checkHandle} = this.props
         return (
             <tr id={task.id}>
                 <td>
                     <div className="number">
-                        <span className={task.checked?"checkBox  checked":"checkBox "} onClick={this.checkBoxHandle.bind(null,id,newTasklist)}></span>
+                        <span className={task.checked?"checkBox  checked":"checkBox "} onClick={this.checkBoxHandle.bind(null,id,task)}></span>
                         <span>{id+1}</span>
                     </div>
                 </td>

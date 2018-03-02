@@ -10,141 +10,69 @@ function FormatDate (strTime) {
     let seconds = (date.getSeconds()<10) ? '0'+date.getSeconds() : date.getSeconds()
     return date.getFullYear()+"-"+month+"-"+day+' '+hours+':'+minutes
   }
-const taskList = [
-    { title: '诺不轻信故人不负我', type: '碎语', state: 'happy', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'something' },
-    { title: '失之淡然 得之坦然', type: '领悟', state: 'happy', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'no' },
-    { title: '诺不轻许故我不负人', type: '碎语', state: 'happy', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'something' },
-    { title: '不忘初心 方得始终', type: '坚信', state: 'right', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'nothing' },
-    { title: '修己以清心为要', type: '碎语', state: 'happy', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'something' },
-    { title: '涉世以慎言为先', type: '碎语', state: 'sad', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'hello' },
-    { title: '诺不轻信故人不负我', type: '碎语', state: 'happy', time: 'Fri Dec 08 2017 11:50:56 GMT+0800 (CST)', other: 'something' }
-]
+
 
 export default class TableContent extends Component {
     constructor(props) {
-        super(props)
-        this.state = {
-            newTasklist: [],
-            checkAll: false,
-            CheckedList:[]
-        }
+        super(props);
+
         this.checkAllHandle = this.checkAllHandle.bind(this)
-        this.checkAdminTask =this.checkAdminTask.bind(this)
         this.checkHandle=this.checkHandle.bind(this)
         this.delTableList=this.delTableList.bind(this)
     }
 
-    componentDidMount() {
-
-        var newTasklists = taskList.map((item,id) =>
-            ({
-                ...item,
-                checked: false,
-                id:id
-            })
-        )
-        this.setState({
-            newTasklist: newTasklists
-        });
-        console.log(newTasklists)
-        console.log(this.state.newTasklist)
-
-    }
-    checkAllHandle(e) {
-        this.setState({
-            checkAll: !this.state.checkAll
+    checkHandle(id,task) {
+        console.log(id)
+        let unchecked = []
+        let checkAll = false
+        this.props.taskList.forEach((task)=>{
+            if(!task.checked){
+                unchecked.push(task.id)
+            }
         })
-        if (this.state.checkAll) {
-            var newTasklists = taskList.map((item,id) =>
-                ({
-                    ...item,
-                    checked: false,
-                    id:id
-                })
-            )
-            this.setState({
-                newTasklist: newTasklists,
-            })
-        }else{
-            var newTasklists = taskList.map((item,id) =>
-                ({
-                    ...item,
-                    checked: true,
-                    id:id
-                })
-            )
-            this.setState({
-                newTasklist: newTasklists,
-                CheckedList:newTasklists
-            })
+        if(unchecked.length==1&&unchecked[0]==id&&!task.checked){
+            checkAll = true
         }
-    }
-    checkAdminTask(){
-        this.setState({
-            checkAll:true 
-        });
-    }
-     checkHandle(id,task) {
-        // console.log(id)
-        this.setState({
-            checkAll: false
-        })
-        var ifChecked=[]
-        var newTbodys=task.map((item)=>
-            item.id === id ?
-                { ...item, checked: !item.checked } : item
-        );
-        this.setState({
-            newTasklist: newTbodys
-        });
-        // console.log(newTbodys[id].checked)
-        for(let i=0;i<newTbodys.length;i++){
-          if(newTbodys[i].checked === true){
-            ifChecked.push(newTbodys[i])
-          }
-        }
-        this.setState({
-            CheckedList: ifChecked
-        });
-        console.log(ifChecked)
-        if(ifChecked.length==newTbodys.length){
-        console.log(ifChecked)
-            this.setState({
-                checkAll:true
-            })
-        }
+        this.props.actions.checkAdminTask(id,checkAll)
     }
     delTableList(){
-        let delTbody=this.state.newTasklist
-        let ifChecked=[]
-        for(let i=0;i<delTbody.length;i++){
-          if(delTbody[i].checked === false){
-            ifChecked.push(delTbody[i])
+        let checkedTask = []
+        console.log(this.props.taskList)
+        this.props.taskList.forEach((task)=>{
+          if(!task.checked){
+            checkedTask.push(task)
           }
-        }
-         var newTbodys=ifChecked.map((item,id)=>
-            ({ 
-               ...item,
-               id:id
+        })
+        var checkeds=checkedTask.map((item,id)=>
+            ({
+                ...item,
+                checked:false,
+                id:id
             })
-        );
-        console.log(ifChecked)
-        this.setState({
-            newTasklist: newTbodys
-        });
-        console.log(this.state.newTasklist)
+         )
+        console.log(checkeds)
+        //目前是假数据，有接口则先调接口删除数据再重新请求pageInfo和taskList
+        const pageInfo={currentPage:2,pageSize:10,totalPage:1,totalRecords:0}
 
+        this.props.actions.batchDelAdminTask(pageInfo,checkeds)
+    }
+     checkAllHandle(){
+        this.props.actions.checkAllAdminTask()
     }
 
     render() {
-        let { pageInfo, searchParamas, actions } = this.props
-        let { newTasklist, checkAll,CheckedList } = this.state
+        let { actions,adminTaskList } = this.props
+        let {checkAll,searchParamas,pageInfo,taskList} = adminTaskList
+         console.log(adminTaskList)
 
         return ( 
         <div className="innerBox">
              <div className="headBtn clearfix ">
                 {/*<div className="addBtn left">新增<span></span></div>*/}
-                <div className="delBtn right" onClick={this.delTableList}>删除<span></span></div>
+                <div className="addBtn left" >redux 批量操作</div>
+                <div className="delBtn right" onClick={this.delTableList}>
+                   删除<span></span>
+                </div>
              </div>
              <table className = "tabeleWrap">
                 <thead>
@@ -164,13 +92,11 @@ export default class TableContent extends Component {
                 </thead> 
                 <tbody> 
                     {
-                        newTasklist.map((task, id) => {
+                        taskList.map((task, id) => {
                             return <TaskItem
                             key = { id }
                             id = { id }
                             task = { task }
-                            newTasklist = { newTasklist }
-                            checkAdminTask={this.checkAdminTask}
                             checkHandle={this.checkHandle}
                             />
                         })
