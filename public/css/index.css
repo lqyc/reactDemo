@@ -54,7 +54,10 @@ em {
     border-radius: 2px;
     border: 1px solid #b5bdc6;
 }
-
+.borderBlue{
+     border-radius: 6px;
+    border: 1px solid #288bf2; 
+}
 input:focus {
     outline: none;
     box-shadow: 1px 1px 8px 0 #1da6f8;
@@ -287,141 +290,55 @@ input:focus {
     color: #fff!important;
 }
 
-.mainTable {
+/*弹窗*/
+.maskBox{
+      background: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #9dadb612;
-    padding: 20px 0;
+    height: 100%;
+    z-index: 30;
 }
-
-.mainTable .headBtn {
-    color: #1da6f8;
-    line-height: 40px;
-    border-bottom: 1px solid #b5bdc6;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.mainTable .headBtn .addBtn {
-    margin-left: 32px;
-}
-
-.mainTable .headBtn .addBtn span {
-    background: url(../image/edit.png);
-    background-size: cover;
-}
-
-.mainTable .headBtn .addBtn:hover {
-    color: #288bf2;
-}
-
-.mainTable .headBtn .addBtn:hover span {
-    background: url(../image/hoverE.png);
-    background-size: cover;
-}
-
-.mainTable .headBtn div span {
-    width: 20px;
-    height: 20px;
-    vertical-align: text-bottom;
-    margin-left: 6px;
-    display: inline-block;
-}
-
-.mainTable .headBtn .delBtn span {
-    background: url(../image/del.png);
-    background-size: cover;
-}
-
-.mainTable .headBtn .delBtn {
-    color: #F75A5A;
-    margin-right: 32px;
-}
-
-.mainTable .headBtn .delBtn:hover span {
-    background: url(../image/hoverD.png);
-    background-size: cover;
-}
-
-.mainTable .headBtn .delBtn:hover {
-    color: red;
-}
-
-
-/*表格*/
-
-.mainTable .innerBox {
+.maskBox .quickBox{
+    width: 300px;
+    height:120px;
+    margin:200px auto;
     background: #fff;
-    box-sizing: border-box;
-    margin: 20px 130px 30px 60px;
-    padding: 20px 50px;
-    border-radius: 6px;
-}
+    border-radius: 8px;
+    padding:50px 30px;
 
-.mainTable .innerBox .tabeleWrap {
-    width: 100%;
-    padding: 0 0 20px 0;
-    border-collapse: collapse;
 }
-
-.mainTable .innerBox .tabeleWrap thead {
-    line-height: 42px;
-    font-family: "PingFangSC-Medium";
-    color: #808080;
-    text-align: center;
+.maskBox .quickBox .quickBtnBox{
+    margin-top: 50px;
+    height: 50px;
+    padding:0 50px;
 }
-
-.mainTable .innerBox .tabeleWrap thead tr td:nth-child(2) {
-    width: 20%;
-    text-align: left;
-    padding-left: 50px;
-}
-.mainTable .innerBox .tabeleWrap thead tr td:nth-child(1) {
-    width: 116px;
-}
-
-.mainTable .innerBox .tabeleWrap thead tr td:nth-child(5) {
-    width: 26%;
-}
-
-.mainTable .innerBox .tabeleWrap tbody tr {
-    line-height: 42px;
-    border-top: 1px solid #E9EBEE;
-    height: 42px;
-    text-align: center; line-height: 42px;
-    color: #383E46;
-}
-
-.mainTable .innerBox .tabeleWrap tbody tr:hover {
-    background: #F8F8F9;
-    cursor: pointer;
-}
-
-.mainTable .innerBox .tabeleWrap tbody tr:hover .title ,
-.mainTable .innerBox .tabeleWrap tbody tr:hover .other {
+.maskBox .quickBox .quickBtnBox .quickBtn{
+    padding:5px 20px;
     color: #288bf2;
+  cursor: pointer;
+}
+.maskBox .quickBox .quickBtnBox .quickBtn:hover{
+    color: #fff;
+    background: #288bf2;
+}
+.maskBox .quickBox .iconDel{
+    width:80px;
+    height: 80px;
+    margin:10px auto;
+}
+.iconDel img{
+    width:80px;
+    height: 80px; 
 }
 
-.mainTable .innerBox .tabeleWrap tbody tr td:nth-child(2) div {
-    text-align: left;
-}
 
-.mainTable .innerBox .tabeleWrap .number .checkBox {
-    margin-right: 8px;
-    background: url(../image/empty.png);
-    background-size: cover;
-    vertical-align: text-bottom;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    cursor: pointer;
-}
-.mainTable .innerBox .tabeleWrap .number  .checked{
-    background: url(../image/checkbox.png);
-    background-size: cover;
-        transform: scale(1.1,1.1);
-}
-.mainTable .innerBox .tabeleWrap .number span:nth-child(2) {
-    width: 30px;
-    display: inline-block;
-    text-align: left;
-}
+
+
+
+
+
+
+
+

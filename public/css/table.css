@@ -1,0 +1,139 @@
+
+.mainTable {
+    width: 100%;
+    background: #9dadb612;
+    padding: 20px 0;
+}
+
+.mainTable .headBtn {
+    color: #1da6f8;
+    line-height: 40px;
+    border-bottom: 1px solid #b5bdc6;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mainTable .headBtn .addBtn {
+    margin-left: 32px;
+}
+
+.mainTable .headBtn .addBtn span {
+    background: url(../image/edit.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn .addBtn:hover {
+    color: #288bf2;
+}
+
+.mainTable .headBtn .addBtn:hover span {
+    background: url(../image/hoverE.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn div span {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.mainTable .headBtn .delBtn span {
+    background: url(../image/del.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn .delBtn {
+    color: #F75A5A;
+    margin-right: 32px;
+}
+
+.mainTable .headBtn .delBtn:hover span {
+    background: url(../image/hoverD.png);
+    background-size: cover;
+}
+
+.mainTable .headBtn .delBtn:hover {
+    color: red;
+}
+
+
+/*表格*/
+
+.mainTable .innerBox {
+    background: #fff;
+    box-sizing: border-box;
+    margin: 20px 130px 30px 60px;
+    padding: 20px 50px;
+    border-radius: 6px;
+}
+
+.mainTable .innerBox .tabeleWrap {
+    width: 100%;
+    padding: 0 0 20px 0;
+    border-collapse: collapse;
+}
+
+.mainTable .innerBox .tabeleWrap thead {
+    line-height: 42px;
+    font-family: "PingFangSC-Medium";
+    color: #808080;
+    text-align: center;
+}
+
+.mainTable .innerBox .tabeleWrap thead tr td:nth-child(2) {
+    width: 20%;
+    text-align: left;
+    padding-left: 50px;
+}
+.mainTable .innerBox .tabeleWrap thead tr td:nth-child(1) {
+    width: 116px;
+}
+
+.mainTable .innerBox .tabeleWrap thead tr td:nth-child(5) {
+    width: 26%;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr {
+    line-height: 42px;
+    border-top: 1px solid #E9EBEE;
+    height: 42px;
+    text-align: center; line-height: 42px;
+    color: #383E46;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr:hover {
+    background: #F8F8F9;
+    cursor: pointer;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr:hover .title ,
+.mainTable .innerBox .tabeleWrap tbody tr:hover .other {
+    color: #288bf2;
+}
+
+.mainTable .innerBox .tabeleWrap tbody tr td:nth-child(2) div {
+    text-align: left;
+}
+
+.mainTable .innerBox .tabeleWrap .number .checkBox {
+    margin-right: 8px;
+    background: url(../image/empty.png);
+    background-size: cover;
+    vertical-align: text-bottom;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.mainTable .innerBox .tabeleWrap .number  .checked{
+    background: url(../image/checkbox.png);
+    background-size: cover;
+        transform: scale(1.1,1.1);
+}
+.mainTable .innerBox .tabeleWrap .number span:nth-child(2) {
+    width: 30px;
+    display: inline-block;
+    text-align: left;
+}

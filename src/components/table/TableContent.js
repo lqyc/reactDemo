@@ -18,7 +18,6 @@ export default class TableContent extends Component {
 
         this.checkAllHandle = this.checkAllHandle.bind(this)
         this.checkHandle=this.checkHandle.bind(this)
-        this.delTableList=this.delTableList.bind(this)
     }
 
     checkHandle(id,task) {
@@ -35,27 +34,7 @@ export default class TableContent extends Component {
         }
         this.props.actions.checkAdminTask(id,checkAll)
     }
-    delTableList(){
-        let checkedTask = []
-        console.log(this.props.taskList)
-        this.props.taskList.forEach((task)=>{
-          if(!task.checked){
-            checkedTask.push(task)
-          }
-        })
-        var checkeds=checkedTask.map((item,id)=>
-            ({
-                ...item,
-                checked:false,
-                id:id
-            })
-         )
-        console.log(checkeds)
-        //目前是假数据，有接口则先调接口删除数据再重新请求pageInfo和taskList
-        const pageInfo={currentPage:2,pageSize:10,totalPage:1,totalRecords:0}
 
-        this.props.actions.batchDelAdminTask(pageInfo,checkeds)
-    }
      checkAllHandle(){
         this.props.actions.checkAllAdminTask()
     }
@@ -63,14 +42,13 @@ export default class TableContent extends Component {
     render() {
         let { actions,adminTaskList } = this.props
         let {checkAll,searchParamas,pageInfo,taskList} = adminTaskList
-         console.log(adminTaskList)
 
         return ( 
         <div className="innerBox">
              <div className="headBtn clearfix ">
                 {/*<div className="addBtn left">新增<span></span></div>*/}
                 <div className="addBtn left" >redux 批量操作</div>
-                <div className="delBtn right" onClick={this.delTableList}>
+                <div className="delBtn right" onClick={this.props.showQuickBox}>
                    删除<span></span>
                 </div>
              </div>
