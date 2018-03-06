@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
+import 'echarts/lib/component/tooltip'
 
 var echarts = require('echarts/lib/echarts')
 require('echarts/lib/chart/bar')
