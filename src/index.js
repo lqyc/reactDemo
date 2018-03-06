@@ -6,9 +6,9 @@ import {Switch, Route,Router } from 'react-router'
 import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 import reducers from './reducers'
-import HomeBox from './components/HomeBox'
-import TableMainBox from './containers/TableMainBox'
-import ChartBox from './components/chart/ChartBox'
+import HomeMainScope from './components/index/HomeMainScope'
+import TableContainer from './containers/TableContainer'
+import ChartMainScope from './components/chart/ChartMainScope'
 import Error from './containers/Error'
 // import { HashRouter as Router,Route} from 'react-router-dom';
 
@@ -30,9 +30,9 @@ render(
      <Router history={history}>
        <div>
          <Switch>
-           <Route exact path="/" component={HomeBox} />
-           <Route path="/about" component={TableMainBox} />
-           <Route path="/chart" component={ChartBox} />
+           <Route exact path="/" component={HomeMainScope} />
+           <Route path="/about" component={TableContainer} />
+           <Route path="/chart" component={ChartMainScope} />
            <Route path="*" component={Error} />
          </Switch>
        </div>

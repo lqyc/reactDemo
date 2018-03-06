@@ -61,7 +61,7 @@ export const SlidersOuter = (props) => {
     </div>
   )
 }
-export default class SlidersWraper extends Component {
+export default class SliderBox extends Component {
   constructor(props){
     super(props)
   }

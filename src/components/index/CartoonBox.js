@@ -15,7 +15,7 @@ const imgLoad = (canvas,imgUrls,animateFunc) => {
         }
     });
 }
-class CartoonWrapper extends Component{
+class CartoonBox extends Component{
     constructor(props){
         super(props)
     }
@@ -37,4 +37,4 @@ class CartoonWrapper extends Component{
     }
 }
 
-export default CartoonWrapper 
+export default CartoonBox 

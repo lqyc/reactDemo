@@ -1,19 +1,19 @@
 import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import TableWrap from '../components/table/TableWrap'
+import TableMainScope from '../components/table/TableMainScope'
 import * as TodoActions from '../actions'
 
-const TableMainBox =({actions,adminTaskList})=>{
+const TableContainer =({actions,adminTaskList})=>{
 	// console.log(actions)
 	return(
 	<div className="tableMainBox">
-      <TableWrap actions={actions}
+      <TableMainScope actions={actions}
                  adminTaskList={adminTaskList}/>
 	</div>
 )}
 
-TableMainBox.propTypes={
+TableContainer.propTypes={
   actions:PropTypes.object.isRequired
 }
 
@@ -27,4 +27,4 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(
 	mapStateToProps,
-	mapDispatchToProps)(TableMainBox)
+	mapDispatchToProps)(TableContainer)

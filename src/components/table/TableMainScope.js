@@ -5,7 +5,7 @@ import TableContent from './TableContent'
 import QuickBox from './QuickBox'
 
 
-export default  class TableWrap extends Component{
+export default  class TableMainScope extends Component{
 	
     constructor(props) {
         super(props);
@@ -110,7 +110,6 @@ export default  class TableWrap extends Component{
 		let {quickBox,quickTip,quickBtn,confirmHide}=this.state
       let {actions,adminTaskList} = this.props
       let {checkAll,searchParamas,pageInfo,taskList} = adminTaskList
-       console.log(taskList)
 		return(
               <div>
 			<NavigationBar current='about'/>
