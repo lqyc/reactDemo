@@ -11,6 +11,8 @@ import TableContainer from './containers/TableContainer'
 import ChartMainScope from './components/chart/ChartMainScope'
 import Error from './containers/Error'
 // import { HashRouter as Router,Route} from 'react-router-dom';
+import Report from './containers/Report'
+
 
 const history = createHistory({basename: ''})
 const middleware = routerMiddleware(history)
@@ -33,6 +35,7 @@ render(
            <Route exact path="/" component={HomeMainScope} />
            <Route path="/about" component={TableContainer} />
            <Route path="/chart" component={ChartMainScope} />
+           <Route path="/Report" component={Report} />
            <Route path="*" component={Error} />
          </Switch>
        </div>

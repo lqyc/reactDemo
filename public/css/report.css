@@ -1,0 +1,277 @@
+.colorRed{
+	color: #F03340;
+}
+.colorGray{
+	color: #A1A1A1;
+}
+.bgRed{
+background: #F03340;
+}
+.textCenter{
+	text-align: center;
+}
+.colorWhite{
+	color:#fff;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+/*动画*/
+.loadingBox {
+    margin: 0px 0 40px;
+}
+
+.loading {
+    background-color: #fff;
+    border-radius: 100%;
+    margin: 0 0 20px 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    border: 4px solid #f45c43;
+    border-bottom-color: transparent;
+    height: 40px;
+    width: 40px;
+    background: transparent !important;
+    display: inline-block;
+    -webkit-animation: rotate 0.75s 0s linear infinite;
+    animation: rotate 0.75s 0s linear infinite;
+}
+
+.loadMore {
+    margin: 16px 0 20px 0;
+    text-align: center;
+    font-size: 28px;
+    color: #A1A1A1;
+    line-height: 50px
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.reportWrap{
+	font-family: PingFangSC-Regular;
+font-size: 26px;
+	box-sizing: border-box;
+color:#444;
+width: 750px;
+margin:0 auto;
+}
+.reportWrap .tabMenuBox{
+	width:540px;
+	margin:30px auto 0;
+	    list-style: none;
+	box-sizing: border-box;
+}
+.reportWrap .tabMenuBox .tapNav{
+	width:33.3%;
+	box-sizing: border-box;
+	height: 56px;
+	float: left;
+	line-height: 56px;
+	border: 2px solid #F03340;
+}
+.reportWrap .tabMenuBox .tapNav:first-child{
+	border-top-left-radius: 4px ;
+	border-bottom-left-radius: 4px ;
+    border-right:none;
+}
+.reportWrap .tabMenuBox .tapNav:last-child{
+	border-top-right-radius: 4px ;
+	border-bottom-right-radius: 4px ;
+border-left: none;
+}
+.lineReact canvas{
+	top:-10px!important;
+}
+.lineReact span{
+	display: none!important;
+}
+.lineReact div{
+	/*height: 280px!important;*/
+}
+.reportWrap .canvasMenu{
+	width:100%;
+	height: 120px;
+}
+
+.reportWrap .canvasMenu .menuList{
+	width:33.3%;
+    box-sizing: border-box;
+	height: 100%;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+background: #FBFBFB;
+	border-top: 1px solid #E8E8E8;	
+border-bottom: none
+}
+.reportWrap .canvasMenu .menuList .navTitle{
+	position: relative;
+	    width: 180px;
+    margin: 25px auto 0;
+}
+.reportWrap .canvasMenu .menuList .navTitle::after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	width:14px;
+	height: 14px;
+	border-radius: 50%;
+}
+
+.reportWrap .canvasMenu .menuList:first-child .navTitle::after{
+background: #F15668;
+	left:6px;
+}
+.reportWrap .canvasMenu .menuList:nth-child(2) .navTitle::after{
+background:  #58A7F8;
+	left:-22px;
+}
+.reportWrap .canvasMenu .menuList:last-child .navTitle::after{
+background: #7DD18D;
+	left:-6px;
+}
+.reportWrap .canvasMenu .menuList:first-child{
+	border-right: 1px solid #E8E8E8;	
+}
+.reportWrap .canvasMenu .menuList:last-child{
+	border-left: 1px solid #E8E8E8;	
+}
+.selectNavBg{
+	background: #fff!important;
+	border-top:1px solid transparent!important;
+
+}
+.goodsRankWrap{
+	border-top: 20px solid #f6f6f6;
+	/*border-bottom: 20px solid #f6f6f6;*/
+	padding-left: 24px;
+}
+.goodsRankWrap .title{
+	height: 88px;
+	line-height: 88px;
+	position: 
+}
+.goodsRankWrap .title .left{
+	/*width:350px;*/
+}
+.goodsRankWrap .tabNav .navName{
+	width:140px;
+	position: relative;
+}
+.goodsRankWrap .tabNav  .sellout:before{
+	position: absolute;
+	    right: -8px;
+    top: 33px;
+	content: '';
+	width:1px;
+	height: 20px;
+	background:  #E8E8E8;
+}
+.goodsRankWrap .tabNav .colorRed:after{
+content: '';
+position: absolute;
+width: 120px;
+height: 4px;
+bottom: 0;
+left: 10px;
+background: #F03340;
+}
+.goodsBox{
+	padding-right:24px;
+	box-sizing: border-box;
+}
+.goodsBox .goodsList{
+	border-top: 1px solid #E8E8E8;	
+height: 160px;
+padding-top: 30px;
+box-sizing: border-box;
+}
+
+.goodsBox .goodsList .detail{
+	padding-top: 10px;
+}
+.goodsBox .goodsList .detail .right{
+	padding-top: 20px;
+}
+
+.goodsBox .goodsList .goodsPic{
+	width: 100px;
+	height: 100px;
+	vertical-align: middle;
+	margin-right: 24px;
+}
+.goodsBox .goodsList .detailName{
+	width: 440px;
+	height: 80px;
+	line-height: 40px;
+	margin-right: 69px;
+}
+.bottomMask{
+	height: 20px;
+	width:105%;
+	left: -24px;
+	background: #E8E8E8;
+	position:fixed;
+	 bottom:0;
+}
+
+/*栗子集市APP用户协议*/
+.userProtocol{
+	padding:60px 40px;
+    font-size: 26px;
+    	font-family: PingFangSC-Regular;
+color: #444444;
+}
+.userProtocol .title{
+	font-family: PingFangSC-Medium;
+line-height: 60px;
+
+}
+.userProtocol .protocol{
+
+line-height: 50px;
+margin-bottom: 40px;
+}
+.userProtocol .protocolBox .title{
+	line-height: 75px;
+margin-bottom: 40px;
+margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

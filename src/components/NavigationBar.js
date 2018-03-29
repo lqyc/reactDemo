@@ -21,6 +21,11 @@ const Menu=({current}) => {
 		        color : current==='chart'?'#fffe66':'#fff',
 		        fontFamily:current==='chart'?'PingFangSC-Semibold':'PingFangSC-Light'
 		        }}>图表</Link></li>
+		        <li><Link to='/Report' style = {{
+		        textDecoration : 'none',
+		        color : current==='Report'?'#fffe66':'#fff',
+		        fontFamily:current==='Report'?'PingFangSC-Semibold':'PingFangSC-Light'
+		        }}>H5报表</Link></li>
 		      </ul>
 		    </div>
 		)
