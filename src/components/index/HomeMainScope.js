@@ -3,7 +3,7 @@ import {animationDatas} from '../../constants/DataModel'
 import CartoonBox from './CartoonBox'
 import SliderBox from './SlideBox'
 import NavigationBar from '../../components/NavigationBar'
-
+import './animation.css'
 
 const animationBox=animationDatas.map((item)=>
    <CartoonBox imgUrls={item.imgArr} animation = {item.animation}

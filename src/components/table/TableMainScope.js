@@ -3,7 +3,7 @@ import NavigationBar from '../NavigationBar'
 import SelectWrap from './SelectWrap'
 import TableContent from './TableContent'
 import QuickBox from './QuickBox'
-
+import './table.css'
 
 export default  class TableMainScope extends Component{
 	

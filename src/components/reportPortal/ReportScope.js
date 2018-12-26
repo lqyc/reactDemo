@@ -3,6 +3,7 @@ import {history} from '../../index'
 import { push, replace } from 'react-router-redux'
 import LineEchart from './LineEchart'
 import GoodsRank from './GoodsRank'
+import  './report.css';
 
 
 const lineData = [
