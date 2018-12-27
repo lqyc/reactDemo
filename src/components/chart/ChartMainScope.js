@@ -21,6 +21,9 @@ export default class ChartMainScope extends Component{
 	 constructor() {
          super();
      }
+     componentDidMount() {
+      window.document.title='echart 动画'
+    }
      render(){
      	return(
      		<div className="chartBox">

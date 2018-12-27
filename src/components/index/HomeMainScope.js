@@ -19,6 +19,9 @@ export default class HomeMainScope extends Component{
   state = {
     screenWidth: document.documentElement.clientWidth
   }
+  componentDidMount() {
+    window.document.title='canvas 动画'
+  }
   // componentDidMount() {
   // 	 window.onresize = () => {
   //     this.setState({

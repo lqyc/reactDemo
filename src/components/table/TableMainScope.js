@@ -18,8 +18,10 @@ export default  class TableMainScope extends Component{
         this.pullTaskList = this.pullTaskList.bind(this)
         this.hideQuickBox=this.hideQuickBox.bind(this)
     }
+    
     componentDidMount() {
       this.pullTaskList()	
+      window.document.title = '表单table'
     }
     pullTaskList(){
     	const pageInfo={currentPage:1,pageSize:10,totalPage:1,totalRecords:0}
