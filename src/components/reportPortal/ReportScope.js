@@ -3,6 +3,7 @@ import {history} from '../../index'
 import { push, replace } from 'react-router-redux'
 import LineEchart from './LineEchart'
 import GoodsRank from './GoodsRank'
+import NavigationBar from '../../components/NavigationBar'
 import  './report.css';
 
 
@@ -76,35 +77,38 @@ export default class ReportScope extends Component {
     let {currentId,date,bargain,orderNum,profits,menuId,color}=this.state
 
     return (
-      <div  className="reportWrap">
-        <ul className="tabMenuBox clearfix">
-           {dateNav.map((item,id)=>
-             <li className={currentId==id?"tapNav textCenter colorWhite bgRed":"colorRed tapNav textCenter"} key={id} onClick={this.selectedOption.bind(this,id,item)}>{item}</li>
-          )}
-        </ul>
-        <LineEchart data={lineData} color={color} menuId={menuId} date={date}/>
-        <div className="canvasMenu textCenter">
-          {menuNav.map((item,id)=>{
-            let dataValue=''
-            switch(id){
-              case 0:dataValue=<div className="data">{bargain}</div>;
-              break;
-              case 1:dataValue=<div className="data">{orderNum}</div>;
-              break;
-              case 2:dataValue=<div className="data">{profits}</div>;
-              break;
-              default:dataValue=<div className="data">0</div>;
-            }
-            return(
-              <div className={menuId==id?"menuList left selectNavBg":"menuList left "} onClick={this.selectedmenuList.bind(this,id,item)} key={id}>
-                <div className="navTitle bargain">{item}</div>
-                  {dataValue}
-             </div>
-              )
-             }
-           )}
+      <div >
+        <NavigationBar current='/Report'/>        
+        <div  className="reportWrap">
+          <ul className="tabMenuBox clearfix">
+            {dateNav.map((item,id)=>
+              <li className={currentId==id?"tapNav textCenter colorWhite bgRed":"colorRed tapNav textCenter"} key={id} onClick={this.selectedOption.bind(this,id,item)}>{item}</li>
+            )}
+          </ul>
+          <LineEchart data={lineData} color={color} menuId={menuId} date={date}/>
+          <div className="canvasMenu textCenter">
+            {menuNav.map((item,id)=>{
+              let dataValue=''
+              switch(id){
+                case 0:dataValue=<div className="data">{bargain}</div>;
+                break;
+                case 1:dataValue=<div className="data">{orderNum}</div>;
+                break;
+                case 2:dataValue=<div className="data">{profits}</div>;
+                break;
+                default:dataValue=<div className="data">0</div>;
+              }
+              return(
+                <div className={menuId==id?"menuList left selectNavBg":"menuList left "} onClick={this.selectedmenuList.bind(this,id,item)} key={id}>
+                  <div className="navTitle bargain">{item}</div>
+                    {dataValue}
+              </div>
+                )
+              }
+            )}
+          </div>
+          <GoodsRank date={date}/>
         </div>
-        <GoodsRank date={date}/>
       </div>
     )
   }

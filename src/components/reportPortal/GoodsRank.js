@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 
 const goods=[
-{url:'/image/3.jpg',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3},
-{url:'/image/logo_lizicloud_web2.png',name:'烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:8},
-{url:'/image/3.jpg',name:'画粉红色挂件 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:5},
+{url:'/image/success.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3},
+{url:'/image/liziLogo.png',name:'烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:8},
+{url:'/image/success.png',name:'画粉红色挂件 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:5},
 {url:'/image/liziLogo.png',name:'色挂件图北欧 ins 火烈鸟装饰画粉红色',number:4},
-{url:'/image/icon_down.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3},
-{url:'/image/liziLogo.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3},
-{url:'/image/icon_down.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3}
+{url:'/image/success.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3},
+{url:'/image/success.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3},
+{url:'/image/liziLogo.png',name:'北欧 ins 火烈鸟装饰画粉红色挂件图北欧 ins 火烈鸟装饰画粉红色',number:3}
 ]
 export default class GoodsRank extends Component {
   constructor(props) {
